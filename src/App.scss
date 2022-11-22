@@ -1,0 +1,44 @@
+html{
+  background: #ccc;
+  height: 100%;
+  display: flex;
+}
+
+body{
+  width: 100%;
+  margin: auto;
+
+}
+
+
+.App{
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.todo-list{
+  background: #fff;
+  font-size: 18px;
+  max-width: 300px;
+  margin: auto;
+  margin-bottom: 24px;
+  padding: 8px 16px;
+  box-shadow: 0 0 10px rgba($color: #000000, $alpha: 2);
+}
+
+$color-Rosa : #c20ebf;
+$colorHover: #ef4bf2;
+
+@mixin button($class, $color, $colorHover) {
+ .button.#{$class}{background: $color-Rosa;} 
+ .button.#{$class}:hover{background: $colorHover;} 
+ .button.#{$class}:active{background: $color-Rosa;} 
+ 
+}
+
+.button{
+  outline: none;
+  padding: 8px
+}
+
+@include button ('pink',$color-Rosa, $colorHover)
